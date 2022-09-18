@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* .gridlist{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    height: 100vh;
+    grid-auto-flow: column;
+    padding: .5em;
+} */
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 120px 120px 120px 120px;
+  grid-template-rows: 120px 120px 120px;
+  align-items: right;
+  /* margin-right: 10px; */
+  background-color: #0e1d4f;
+  /* padding: 10px; */
+  position: absolute;
+  right: 5%;
+  top: 55%;
+  
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  
+  /* grid-area: right; */
+  /* position: relative;
+  left: 1500px; */
+  
+}
+
+.grid-item:nth-child(1) {
+    display:grid;
+    padding:0;
+    margin:0;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.grid-item:nth-child(2) {
+    display:grid;
+    padding:0;
+    margin:0;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.grid-item:nth-child(3) {
+    display:grid;
+    padding:0;
+    margin:0;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.grid-item:nth-child(4) {
+    display:grid;
+    padding:0;
+    margin:0;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.grid-item:nth-child(5) {
+    display:grid;
+    padding:0;
+    margin:0;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.grid-item:nth-child(6) {
+    display:grid;
+    padding:0;
+    margin:0;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.sqw{
+    margin:0;
+    padding:0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 255, 255);
+}
+.sqo{
+    margin:0;
+    padding:0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 133, 2);
+}
+.sqg{
+    margin:0;
+    padding:0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgb(38, 255, 0);
+}
+.sqr{
+    margin:0;
+    padding:0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgb(252, 5, 5);
+}
+.sqb{
+    margin:0;
+    padding:0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgb(1, 86, 255);
+}
+.sqy{
+    margin:0;
+    padding:0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 242, 0);
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <h3 id="scramble">scramble</h3>
+    </header>
+    
+        <div class="grid-container">
+          <div class="grid-item">
+            <div id="111" class="sqw"></div>
+            <div id="112" class="sqw"></div>
+            <div id="113" class="sqw"></div>
+            <div id="121" class="sqw"></div>
+            <div id="122" class="sqw"></div>
+            <div id="123" class="sqw"></div>
+            <div id="131" class="sqw"></div>
+            <div id="132" class="sqw"></div>
+            <div id="133" class="sqw"></div>
+          </div>
+          <div class="grid-item">
+            <div id="211" class="sqo"></div>
+            <div id="212" class="sqo"></div>
+            <div id="213" class="sqo"></div>
+            <div id="221" class="sqo"></div>
+            <div id="222" class="sqo"></div>
+            <div id="223" class="sqo"></div>
+            <div id="231" class="sqo"></div>
+            <div id="232" class="sqo"></div>
+            <div id="233" class="sqo"></div>
+          </div>
+          <div class="grid-item">
+            <div id="311" class="sqg"></div>
+            <div id="312" class="sqg"></div>
+            <div id="313" class="sqg"></div>
+            <div id="321" class="sqg"></div>
+            <div id="322" class="sqg"></div>
+            <div id="323" class="sqg"></div>
+            <div id="331" class="sqg"></div>
+            <div id="332" class="sqg"></div>
+            <div id="333" class="sqg"></div>
+          </div>
+          <div class="grid-item">
+            <div id="411" class="sqr"></div>
+            <div id="412" class="sqr"></div>
+            <div id="413" class="sqr"></div>
+            <div id="421" class="sqr"></div>
+            <div id="422" class="sqr"></div>
+            <div id="423" class="sqr"></div>
+            <div id="431" class="sqr"></div>
+            <div id="432" class="sqr"></div>
+            <div id="433" class="sqr"></div>
+          </div>
+          <div class="grid-item">
+            <div id="511" class="sqb"></div>
+            <div id="512" class="sqb"></div>
+            <div id="513" class="sqb"></div>
+            <div id="521" class="sqb"></div>
+            <div id="522" class="sqb"></div>
+            <div id="523" class="sqb"></div>
+            <div id="531" class="sqb"></div>
+            <div id="532" class="sqb"></div>
+            <div id="533" class="sqb"></div>
+          </div>
+          <div class="grid-item">
+            <div id="611" class="sqy"></div>
+            <div id="612" class="sqy"></div>
+            <div id="613" class="sqy"></div>
+            <div id="621" class="sqy"></div>
+            <div id="622" class="sqy"></div>
+            <div id="623" class="sqy"></div>
+            <div id="631" class="sqy"></div>
+            <div id="632" class="sqy"></div>
+            <div id="633" class="sqy"></div>
+          </div>
+        </div>
+        
+        
+
+<script>
+
+const back = ["B", "B2", "B'"];
+const front = ["F", "F2", "F'"];
+const left = ["L", "L2", "L'"];
+const right = ["R", "R2", "R'"];
+const up = ["U", "U2", "U'"];
+const down = ["D", "D2", "D'"];
+const all = back.concat(front, left, right, up, down);
+function getScramble(){
+let scramble = "";
+let rando = all[Math.floor(Math.random() * all.length)];
+drawScramble(rando);
+scramble +=rando;
+let prev = rando;
+for(let i=0; i<20; i++){
+    while(true){
+        rando = all[Math.floor(Math.random() * all.length)];
+        if(back.includes(prev) && !front.includes(rando) && !back.includes(rando)){
+            prev = rando;
+            scramble = scramble + " " + rando;
+            drawScramble(rando);
+            break;
+        }
+        else if(front.includes(prev) && !front.includes(rando) && !back.includes(rando)){
+            prev = rando;
+            scramble = scramble + " " + rando;
+            drawScramble(rando);
+            break;
+        }
+        else if(right.includes(prev) && !right.includes(rando) && !left.includes(rando)){
+            prev = rando;
+            scramble = scramble + " " + rando;
+            drawScramble(rando);
+            break;
+        }
+        else if(left.includes(prev) && !right.includes(rando) && !left.includes(rando)){
+            prev = rando;
+            scramble = scramble + " " + rando;
+            drawScramble(rando);
+            break;
+        }
+        else if(up.includes(prev) && !down.includes(rando) && !up.includes(rando)){
+            prev = rando;
+            scramble = scramble + " " + rando;
+            drawScramble(rando);
+            break;
+        }
+        else if(down.includes(prev) && !down.includes(rando) && !up.includes(rando)){
+            prev = rando;
+            scramble = scramble + " " + rando;
+            drawScramble(rando);
+            break;
+        }
+    }
+}
+document.getElementById("scramble").innerHTML = scramble;
+}
+
+function drawScramble(random){
+    if(random=="R"){
+                var classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("531").className;
+                document.getElementById("531").className = classes;
+                classes = document.getElementById("123").className;
+                document.getElementById("123").className = document.getElementById("323").className;
+                document.getElementById("323").className = document.getElementById("623").className;
+                document.getElementById("623").className = document.getElementById("521").className;
+                document.getElementById("521").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("511").className;
+                document.getElementById("511").className = classes;
+                classes = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("431").className;
+                document.getElementById("431").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("413").className;
+                document.getElementById("413").className = classes;
+                classes = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("421").className;
+                document.getElementById("421").className = document.getElementById("432").className;
+                document.getElementById("432").className = document.getElementById("423").className;
+                document.getElementById("423").className = classes;
+            }
+            else if(random=="R2"){
+                var classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("531").className;
+                document.getElementById("531").className = classes;
+                classes = document.getElementById("123").className;
+                document.getElementById("123").className = document.getElementById("323").className;
+                document.getElementById("323").className = document.getElementById("623").className;
+                document.getElementById("623").className = document.getElementById("521").className;
+                document.getElementById("521").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("511").className;
+                document.getElementById("511").className = classes;
+                classes = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("431").className;
+                document.getElementById("431").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("413").className;
+                document.getElementById("413").className = classes;
+                classes = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("421").className;
+                document.getElementById("421").className = document.getElementById("432").className;
+                document.getElementById("432").className = document.getElementById("423").className;
+                document.getElementById("423").className = classes;
+                classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("531").className;
+                document.getElementById("531").className = classes;
+                classes = document.getElementById("123").className;
+                document.getElementById("123").className = document.getElementById("323").className;
+                document.getElementById("323").className = document.getElementById("623").className;
+                document.getElementById("623").className = document.getElementById("521").className;
+                document.getElementById("521").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("511").className;
+                document.getElementById("511").className = classes;
+                classes = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("431").className;
+                document.getElementById("431").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("413").className;
+                document.getElementById("413").className = classes;
+                classes = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("421").className;
+                document.getElementById("421").className = document.getElementById("432").className;
+                document.getElementById("432").className = document.getElementById("423").className;
+                document.getElementById("423").className = classes;
+            }
+            else if(random=="R'"){
+                var classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("531").className;
+                document.getElementById("531").className = classes;
+                classes = document.getElementById("123").className;
+                document.getElementById("123").className = document.getElementById("323").className;
+                document.getElementById("323").className = document.getElementById("623").className;
+                document.getElementById("623").className = document.getElementById("521").className;
+                document.getElementById("521").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("511").className;
+                document.getElementById("511").className = classes;
+                classes = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("431").className;
+                document.getElementById("431").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("413").className;
+                document.getElementById("413").className = classes;
+                classes = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("421").className;
+                document.getElementById("421").className = document.getElementById("432").className;
+                document.getElementById("432").className = document.getElementById("423").className;
+                document.getElementById("423").className = classes;
+                classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("531").className;
+                document.getElementById("531").className = classes;
+                classes = document.getElementById("123").className;
+                document.getElementById("123").className = document.getElementById("323").className;
+                document.getElementById("323").className = document.getElementById("623").className;
+                document.getElementById("623").className = document.getElementById("521").className;
+                document.getElementById("521").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("511").className;
+                document.getElementById("511").className = classes;
+                classes = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("431").className;
+                document.getElementById("431").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("413").className;
+                document.getElementById("413").className = classes;
+                classes = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("421").className;
+                document.getElementById("421").className = document.getElementById("432").className;
+                document.getElementById("432").className = document.getElementById("423").className;
+                document.getElementById("423").className = classes;
+                classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("531").className;
+                document.getElementById("531").className = classes;
+                classes = document.getElementById("123").className;
+                document.getElementById("123").className = document.getElementById("323").className;
+                document.getElementById("323").className = document.getElementById("623").className;
+                document.getElementById("623").className = document.getElementById("521").className;
+                document.getElementById("521").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("511").className;
+                document.getElementById("511").className = classes;
+                classes = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("431").className;
+                document.getElementById("431").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("413").className;
+                document.getElementById("413").className = classes;
+                classes = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("421").className;
+                document.getElementById("421").className = document.getElementById("432").className;
+                document.getElementById("432").className = document.getElementById("423").className;
+                document.getElementById("423").className = classes;
+            }
+            else if(random=="B"){
+                var classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("423").className;
+                document.getElementById("423").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("521").className;
+                document.getElementById("521").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+
+            }
+            else if(random=="B2"){
+                var classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("423").className;
+                document.getElementById("423").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("521").className;
+                document.getElementById("521").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("423").className;
+                document.getElementById("423").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("521").className;
+                document.getElementById("521").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+            }
+            else if(random=="B'"){
+                var classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("423").className;
+                document.getElementById("423").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("521").className;
+                document.getElementById("521").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("423").className;
+                document.getElementById("423").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("521").className;
+                document.getElementById("521").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("113").className;
+                document.getElementById("113").className = document.getElementById("433").className;
+                document.getElementById("433").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("423").className;
+                document.getElementById("423").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("521").className;
+                document.getElementById("521").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+            }
+            else if(random=="L"){
+                var classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("533").className;
+                document.getElementById("533").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("212").className;
+                document.getElementById("212").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("211").className;
+                document.getElementById("211").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("533").className;
+                document.getElementById("533").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("212").className;
+                document.getElementById("212").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("211").className;
+                document.getElementById("211").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("533").className;
+                document.getElementById("533").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("212").className;
+                document.getElementById("212").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("211").className;
+                document.getElementById("211").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+            }
+            else if(random=="L2"){
+                var classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("533").className;
+                document.getElementById("533").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("212").className;
+                document.getElementById("212").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("211").className;
+                document.getElementById("211").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("533").className;
+                document.getElementById("533").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("212").className;
+                document.getElementById("212").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("211").className;
+                document.getElementById("211").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+            }
+            else if(random=="L'"){
+                var classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("533").className;
+                document.getElementById("533").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("513").className;
+                document.getElementById("513").className = classes;
+                classes = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("523").className;
+                document.getElementById("523").className = classes;
+                classes = document.getElementById("212").className;
+                document.getElementById("212").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("221").className;
+                document.getElementById("221").className = classes;
+                classes = document.getElementById("211").className;
+                document.getElementById("211").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("231").className;
+                document.getElementById("231").className = classes;
+            }
+            else if(random=="U"){
+                var classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("513").className;
+                document.getElementById("513").className = document.getElementById("213").className;
+                document.getElementById("213").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("212").className;
+                document.getElementById("212").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("113").className;
+                document.getElementById("113").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("123").className;
+                document.getElementById("123").className = classes;
+            }
+            else if(random=="U2"){
+                var classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("513").className;
+                document.getElementById("513").className = document.getElementById("213").className;
+                document.getElementById("213").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("212").className;
+                document.getElementById("212").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("113").className;
+                document.getElementById("113").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("123").className;
+                document.getElementById("123").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("513").className;
+                document.getElementById("513").className = document.getElementById("213").className;
+                document.getElementById("213").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("212").className;
+                document.getElementById("212").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("113").className;
+                document.getElementById("113").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("123").className;
+                document.getElementById("123").className = classes;
+            }
+            else if(random=="U'"){
+                var classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("513").className;
+                document.getElementById("513").className = document.getElementById("213").className;
+                document.getElementById("213").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("212").className;
+                document.getElementById("212").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("113").className;
+                document.getElementById("113").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("123").className;
+                document.getElementById("123").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("513").className;
+                document.getElementById("513").className = document.getElementById("213").className;
+                document.getElementById("213").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("212").className;
+                document.getElementById("212").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("113").className;
+                document.getElementById("113").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("123").className;
+                document.getElementById("123").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("411").className;
+                document.getElementById("411").className = document.getElementById("511").className;
+                document.getElementById("511").className = document.getElementById("211").className;
+                document.getElementById("211").className = classes;
+                classes = document.getElementById("313").className;
+                document.getElementById("313").className = document.getElementById("413").className;
+                document.getElementById("413").className = document.getElementById("513").className;
+                document.getElementById("513").className = document.getElementById("213").className;
+                document.getElementById("213").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("412").className;
+                document.getElementById("412").className = document.getElementById("512").className;
+                document.getElementById("512").className = document.getElementById("212").className;
+                document.getElementById("212").className = classes;
+                classes = document.getElementById("111").className;
+                document.getElementById("111").className = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("113").className;
+                document.getElementById("113").className = classes;
+                classes = document.getElementById("112").className;
+                document.getElementById("112").className = document.getElementById("121").className;
+                document.getElementById("121").className = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("123").className;
+                document.getElementById("123").className = classes;
+            }
+            else if(random=="D"){
+                var classes = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("231").className;
+                document.getElementById("231").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("433").className;
+                document.getElementById("433").className = classes;
+                classes = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("432").className;
+                document.getElementById("432").className = classes;
+                classes = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("613").className;
+                document.getElementById("613").className = classes;
+                classes = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("623").className;
+                document.getElementById("623").className = classes;
+            }
+            else if(random=="D2"){
+                var classes = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("231").className;
+                document.getElementById("231").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("433").className;
+                document.getElementById("433").className = classes;
+                classes = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("432").className;
+                document.getElementById("432").className = classes;
+                classes = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("613").className;
+                document.getElementById("613").className = classes;
+                classes = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("623").className;
+                document.getElementById("623").className = classes;
+                classes = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("231").className;
+                document.getElementById("231").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("433").className;
+                document.getElementById("433").className = classes;
+                classes = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("432").className;
+                document.getElementById("432").className = classes;
+                classes = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("613").className;
+                document.getElementById("613").className = classes;
+                classes = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("623").className;
+                document.getElementById("623").className = classes;
+            }
+            else if(random=="D'"){
+                var classes = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("231").className;
+                document.getElementById("231").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("433").className;
+                document.getElementById("433").className = classes;
+                classes = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("432").className;
+                document.getElementById("432").className = classes;
+                classes = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("613").className;
+                document.getElementById("613").className = classes;
+                classes = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("623").className;
+                document.getElementById("623").className = classes;
+                classes = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("231").className;
+                document.getElementById("231").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("433").className;
+                document.getElementById("433").className = classes;
+                classes = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("432").className;
+                document.getElementById("432").className = classes;
+                classes = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("613").className;
+                document.getElementById("613").className = classes;
+                classes = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("623").className;
+                document.getElementById("623").className = classes;
+                classes = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("231").className;
+                document.getElementById("231").className = document.getElementById("531").className;
+                document.getElementById("531").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("533").className;
+                document.getElementById("533").className = document.getElementById("433").className;
+                document.getElementById("433").className = classes;
+                classes = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("232").className;
+                document.getElementById("232").className = document.getElementById("532").className;
+                document.getElementById("532").className = document.getElementById("432").className;
+                document.getElementById("432").className = classes;
+                classes = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("631").className;
+                document.getElementById("631").className = document.getElementById("633").className;
+                document.getElementById("633").className = document.getElementById("613").className;
+                document.getElementById("613").className = classes;
+                classes = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("621").className;
+                document.getElementById("621").className = document.getElementById("632").className;
+                document.getElementById("632").className = document.getElementById("623").className;
+                document.getElementById("623").className = classes;
+            }
+            else if(random=="F"){
+                var classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("411").className;
+                document.getElementById("411").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("421").className;
+                document.getElementById("421").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("313").className;
+                document.getElementById("313").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("323").className;
+                document.getElementById("323").className = classes;
+            }
+            else if(random=="F2"){
+                var classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("411").className;
+                document.getElementById("411").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("421").className;
+                document.getElementById("421").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("313").className;
+                document.getElementById("313").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("323").className;
+                document.getElementById("323").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("411").className;
+                document.getElementById("411").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("421").className;
+                document.getElementById("421").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("313").className;
+                document.getElementById("313").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("323").className;
+                document.getElementById("323").className = classes;
+            }
+            else if(random=="F'"){
+                var classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("411").className;
+                document.getElementById("411").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("421").className;
+                document.getElementById("421").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("313").className;
+                document.getElementById("313").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("323").className;
+                document.getElementById("323").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("411").className;
+                document.getElementById("411").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("421").className;
+                document.getElementById("421").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("313").className;
+                document.getElementById("313").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("323").className;
+                document.getElementById("323").className = classes;
+                classes = document.getElementById("131").className;
+                document.getElementById("131").className = document.getElementById("233").className;
+                document.getElementById("233").className = document.getElementById("613").className;
+                document.getElementById("613").className = document.getElementById("411").className;
+                document.getElementById("411").className = classes;
+                classes = document.getElementById("133").className;
+                document.getElementById("133").className = document.getElementById("213").className;
+                document.getElementById("213").className = document.getElementById("611").className;
+                document.getElementById("611").className = document.getElementById("431").className;
+                document.getElementById("431").className = classes;
+                classes = document.getElementById("132").className;
+                document.getElementById("132").className = document.getElementById("223").className;
+                document.getElementById("223").className = document.getElementById("612").className;
+                document.getElementById("612").className = document.getElementById("421").className;
+                document.getElementById("421").className = classes;
+                classes = document.getElementById("311").className;
+                document.getElementById("311").className = document.getElementById("331").className;
+                document.getElementById("331").className = document.getElementById("333").className;
+                document.getElementById("333").className = document.getElementById("313").className;
+                document.getElementById("313").className = classes;
+                classes = document.getElementById("312").className;
+                document.getElementById("312").className = document.getElementById("321").className;
+                document.getElementById("321").className = document.getElementById("332").className;
+                document.getElementById("332").className = document.getElementById("323").className;
+                document.getElementById("323").className = classes;
+            }
+}
+function reset(){
+    document.getElementById("111").className = "sqw";
+    document.getElementById("112").className = "sqw";
+    document.getElementById("113").className = "sqw";
+    document.getElementById("121").className = "sqw";
+    document.getElementById("122").className = "sqw";
+    document.getElementById("123").className = "sqw";
+    document.getElementById("131").className = "sqw";
+    document.getElementById("132").className = "sqw";
+    document.getElementById("133").className = "sqw";
+
+    document.getElementById("211").className = "sqo";
+    document.getElementById("212").className = "sqo";
+    document.getElementById("213").className = "sqo";
+    document.getElementById("221").className = "sqo";
+    document.getElementById("222").className = "sqo";
+    document.getElementById("223").className = "sqo";
+    document.getElementById("231").className = "sqo";
+    document.getElementById("232").className = "sqo";
+    document.getElementById("233").className = "sqo";
+
+    document.getElementById("311").className = "sqg";
+    document.getElementById("312").className = "sqg";
+    document.getElementById("313").className = "sqg";
+    document.getElementById("321").className = "sqg";
+    document.getElementById("322").className = "sqg";
+    document.getElementById("323").className = "sqg";
+    document.getElementById("331").className = "sqg";
+    document.getElementById("332").className = "sqg";
+    document.getElementById("333").className = "sqg";
+
+    document.getElementById("411").className = "sqr";
+    document.getElementById("412").className = "sqr";
+    document.getElementById("413").className = "sqr";
+    document.getElementById("421").className = "sqr";
+    document.getElementById("422").className = "sqr";
+    document.getElementById("423").className = "sqr";
+    document.getElementById("431").className = "sqr";
+    document.getElementById("432").className = "sqr";
+    document.getElementById("433").className = "sqr";
+
+    document.getElementById("511").className = "sqb";
+    document.getElementById("512").className = "sqb";
+    document.getElementById("513").className = "sqb";
+    document.getElementById("521").className = "sqb";
+    document.getElementById("522").className = "sqb";
+    document.getElementById("523").className = "sqb";
+    document.getElementById("531").className = "sqb";
+    document.getElementById("532").className = "sqb";
+    document.getElementById("533").className = "sqb";
+
+    document.getElementById("611").className = "sqy";
+    document.getElementById("612").className = "sqy";
+    document.getElementById("613").className = "sqy";
+    document.getElementById("621").className = "sqy";
+    document.getElementById("622").className = "sqy";
+    document.getElementById("623").className = "sqy";
+    document.getElementById("631").className = "sqy";
+    document.getElementById("632").className = "sqy";
+    document.getElementById("633").className = "sqy";
+
+}
+window.onload = function() {
+    getScramble();
+    // drawScramble("F");
+    // drawScramble("D");
+
+};
+</script>
+
+</body>
+</html>
+
